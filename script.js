@@ -9,6 +9,7 @@ const app = {
   option: '',
   isGameStart: false,
   isWinnerExist: false,
+  equality: false,
   currentPlayer: '',
   playersChoice: [],
   
@@ -56,6 +57,7 @@ const app = {
     app.playersChoice[currentIndex] = currentValue;
     console.log(app.playersChoice);
     app.verification();
+    if (app.equality) return app.createRestartButton();
     if (!app.isWinnerExist) return app.switchPlayerTurn();
     if (app.isWinnerExist) return app.createRestartButton();
   },
@@ -83,6 +85,7 @@ const app = {
     app.isWinnerExist = false;
     app.currentPlayer = '';
     app.playersChoice = [];
+    app.equality = false;
 
     playersChoices.forEach(playerChoice => {
       playerChoice.innerText = null;
@@ -141,6 +144,11 @@ const app = {
     } else if (app.playersChoice[3] !== undefined && app.playersChoice[5] !== undefined && app.playersChoice[7] !== undefined && app.playersChoice[3] === app.playersChoice[5] && app.playersChoice[5] === app.playersChoice[7]) {
 
       app.isWinnerExist = true;
+      app.gameTurnUpdateDisplay();
+
+    } else if (app.playersChoice[1] !== undefined && app.playersChoice[2] !== undefined && app.playersChoice[3] !== undefined && app.playersChoice[4] !== undefined && app.playersChoice[5] !== undefined && app.playersChoice[6] !== undefined && app.playersChoice[7] !== undefined && app.playersChoice[8] !== undefined && app.playersChoice[9] !== undefined) {
+
+      app.equality = true;
       app.gameTurnUpdateDisplay();
 
     }
@@ -253,6 +261,7 @@ const app = {
   // handle the display of the player's turn when the game is started, if the game is not started, return nothing
   gameTurnUpdateDisplay: () => {
     if (!app.isGameStart) return
+    if (app.equality) return gamePlayerTurn.innerText = 'Egalité !';
     if (app.isWinnerExist) {
       if (app.currentPlayer === app.playerOneChoice) {
         gamePlayerTurn.innerText = `Victoire du ${app.playerOne} !`;

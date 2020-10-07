@@ -27,7 +27,6 @@ body {
 
 .players-description {
   color: #fff;
-  font-weight: 777;
   align-self: center;
   font-size: 1.5rem;
   text-align: left;
@@ -35,7 +34,6 @@ body {
 
 .players-choose {
   text-decoration: underline;
-  font-weight: 777;
   font-size: 2rem;
   color: #fff;
   align-self: center;
@@ -71,7 +69,6 @@ body {
   transition: padding 0.5s ease;
   padding: 0.3rem;
   align-self: center;
-  font-weight: 777;
   cursor: pointer;
 }
 
@@ -84,7 +81,6 @@ body {
   font-size: 1.7rem;
   text-decoration: underline;
   color: #fff;
-  font-weight: 777;
 }
 
 .first {
