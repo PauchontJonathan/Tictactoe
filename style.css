@@ -70,6 +70,7 @@ body {
   padding: 0.3rem;
   align-self: center;
   cursor: pointer;
+  font-weight: 777;
 }
 
 .players-options:hover {

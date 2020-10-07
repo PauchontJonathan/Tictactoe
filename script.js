@@ -46,7 +46,6 @@ const app = {
     if(e.currentTarget.innerText !== '') return
     currentCell = e.currentTarget;
     currentCell.innerText = `${app.currentPlayer}`;
-    console.log(app.currentPlayer);
     currentData = currentCell.getAttribute('data-id');
     const parsedData = parseInt(currentData);
     app.insertToArray(parsedData, app.currentPlayer);
@@ -55,7 +54,6 @@ const app = {
   // insert the current value to an empty array. To know if we have a winner after that
   insertToArray: (currentIndex, currentValue) => {
     app.playersChoice[currentIndex] = currentValue;
-    console.log(app.playersChoice);
     app.verification();
     if (app.equality) return app.createRestartButton();
     if (!app.isWinnerExist) return app.switchPlayerTurn();
