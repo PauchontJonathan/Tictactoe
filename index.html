@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> 
+  <link href="style.css" rel="stylesheet" >
+  <title>Tictactoe</title>
+</head>
+<body>
+  <div class="players">
+    <h1 class="players-title">Tic-Tac-Toe</h1>
+    <p class="players-description">Les règles du jeu sont simples: Vous devez d'abord choisir quelle option vous voulez choisir entre X et O, le premier joueur commence à choisir et le second suit. Le but du jeu est de faire une combinaison de 3 signes identiques en diagonale en horizontal ou en vertical. Que le meilleur l'emporte ! (Le jeu se joue sur un seul écran pour le moment)</p>
+    <p class="players-choose"></p>
+    <button class="players-clear">Annuler</button> 
+    <button class="players-options">X</button>
+    <button class="players-options">0</button>
+    <p data-choice="1" class="players-choice first"></p>
+    <p data-choice="2" class="players-choice second"></p>
+    <div class="game">
+      <div data-id="1" class="game-cell"></div>
+      <div data-id="2" class="game-cell"></div>
+      <div data-id="3" class="game-cell"></div>
+      <div data-id="4" class="game-cell"></div>
+      <div data-id="5" class="game-cell"></div>
+      <div data-id="6" class="game-cell"></div>
+      <div data-id="7" class="game-cell"></div>
+      <div data-id="8" class="game-cell"></div>
+      <div data-id="9" class="game-cell"></div>
+    </div>
+    <p class="game-round"></p>
+  </div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
